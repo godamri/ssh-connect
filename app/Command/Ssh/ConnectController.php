@@ -16,7 +16,7 @@ class ConnectController extends CommandController
             return;
         }
         foreach ($configs as $key => $config) {
-            $this->getPrinter()->display('[' . $key . ']' . $config['connection_name'] . '[' . $config['user'] . ']');
+            $this->getPrinter()->display('[' . $key . ']' . $config['user'] . '@' . $config['connection_name']);
         }
         $selected = 0;
         $input = new Input('Select Connection: [' . $selected . '] =>');

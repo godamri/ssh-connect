@@ -20,7 +20,7 @@ class ListController extends CommandController
         }
         foreach($configs as $config)
         {
-            $this->getPrinter()->display($config['connection_name'].'['.$config['user'].']');
+            $this->getPrinter()->display($config['user'] . '@' . $config['connection_name']);
         }
         
     }
